@@ -1,0 +1,34 @@
+@media print {
+  blockquote {
+    border: none;
+  }
+
+  header {
+    background: var(--scout-light-grey);
+    --text-color: black;
+
+    #header-logo {
+      img {
+        filter: invert(100%);
+        max-width: 125rem;
+      }
+    }
+
+    #header-text {
+      font-size: 0.75rem;
+    }
+
+    #header-navigation {
+      display: none;
+    }
+  }
+
+  footer {
+    background: var(--scout-light-grey);
+    --text-color: black;
+
+    #footer-legal {
+      --text-color: black;
+    }
+  }
+}

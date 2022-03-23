@@ -1,0 +1,54 @@
+footer {
+  background-color: var(--footer-background);
+  --text-color: var(--footer-foreground);
+  display: grid;
+  grid-gap: 1rem;
+  align-items: flex-start;
+  padding: 0.75rem;
+
+  grid-template-areas:
+    "social      legal"
+  ;
+
+  p {
+    margin-top: 0.25rem;
+    margin-bottom: 0.25rem;
+  }
+
+  #footer-social {
+    grid-area: social;
+  }
+
+  #footer-legal {
+    grid-area: legal;
+    text-align: right;
+    --text-color: var(--scout-light-grey);
+    font-size: 0.875rem;
+
+    a {
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+@media screen and (max-width: 32rem) {
+  footer {
+    grid-template-areas:
+      "social"
+      "legal"
+    ;
+
+    grid-gap: 0.5rem;
+  }
+}
+
+@media screen and (max-width: 40rem) {
+  footer {
+    padding: 0.25rem;
+    grid-gap: 0.5rem;
+  }
+}

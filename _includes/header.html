@@ -1,0 +1,15 @@
+<header class="layout-{{ page.layout }}">
+  <div id="header-logo">
+    <a href="{{ "/" | relative_url }}">
+      {%- include header-logo.html -%}
+    </a>
+  </div>
+
+  <div id="header-text">
+    {%- include header-text.html -%}
+  </div>
+
+  <div id="header-navigation">
+    {%- include header-navigation.html -%}
+  </div>
+</header>

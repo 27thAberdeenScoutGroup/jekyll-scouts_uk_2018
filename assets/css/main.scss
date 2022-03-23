@@ -1,0 +1,144 @@
+---
+---
+
+:root {
+  --scout-purple: #7413dc;
+  --scout-teal: #00a794;
+  --scout-black: #000000;
+  --scout-dark-grey: #707070;
+  --scout-light-grey: #f5f5f5;
+  --scout-white: #ffffff;
+  --scout-red: #e22e12;
+  --scout-pink: #ffb4e5;
+  --scout-green: #23a950;
+  --scout-navy: #003982;
+  --scout-blue: #006ddf;
+  --scout-yellow: #ffe627;
+  --scout-section-green: #004851;
+
+  --header-background: var(--scout-{{ site.country_colour | default: "purple" }});
+  --header-foreground: var(--scout-white);
+  --footer-background: var(--header-background);
+  --footer-foreground: var(--header-foreground);
+  --text-color: var(--scout-black);
+}
+
+html {
+  font-family: "Nunito Sans", Arial, sans-serif;
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+h1 {
+  color: var(--text-color);
+  font-size: 3.125rem;
+  font-weight: bold;
+  line-height: 3.75rem;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+h2 {
+  color: var(--text-color);
+  font-size: 2.5rem;
+  font-weight: bold;
+  line-height: 3.75rem;
+}
+
+h3 {
+  color: var(--text-color);
+  font-size: 1.875rem;
+  font-weight: bold;
+  line-height: 2.5rem;
+}
+
+h4 {
+  color: var(--text-color);
+  font-size: 1.25rem;
+  font-weight: bold;
+  line-height: 1.875rem;
+}
+
+a {
+  color: var(--text-color);
+}
+
+div, p, span {
+  color: var(--text-color);
+}
+
+small {
+  --text-color: var(--scout-dark-grey);
+  color: var(--text-color);
+  font-size: 0.875rem;
+}
+
+img {
+  max-width: 90%;
+  vertical-align: middle;
+  padding: 0;
+  margin: 0;
+}
+
+figure > img {
+  display: block;
+}
+
+figcaption {
+  font-size: 0.9rem;
+}
+
+blockquote {
+  font-size: 1.1rem;
+  font-style: italic;
+  background: var(--scout-light-grey);
+  border-left: 0.125rem solid var(--scout-purple);
+  padding-left: 0.5rem;
+}
+
+ul.social-links {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+
+  li {
+    a {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 0.25rem;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    a svg {
+      display: inline-block;
+      height: 1.5rem;
+      width: 1.5rem;
+    }
+  }
+}
+
+
+@import "header";
+
+main {
+  flex-grow: 1;
+  margin: 1.5rem;
+}
+
+@import "footer";
+
+@import "sections";
+
+@import "print";

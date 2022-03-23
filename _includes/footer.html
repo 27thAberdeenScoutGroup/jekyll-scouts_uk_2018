@@ -1,0 +1,17 @@
+<footer class="layout-{{ page.layout }}">
+  <div id="footer-social">
+    {%- assign social_links = site.social_links -%}
+    {%- include social-links.html -%}
+  </div>
+
+  <div id="footer-legal">
+    <p>&copy;{{ 'now' | date: "%Y" }} {{ site.name }}.</p>
+    {%- if site.charity_number -%}
+      {%- if site.charity_number contains 'SC' -%}
+        <p>Registered charity <a href="https://www.oscr.org.uk/about-charities/search-the-register/charity-details?number={{ site.charity_number }}" rel="nofollow noreferrer noopener" target="_blank">{{ site.charity_number }}</a>.</p>
+      {%- else -%}
+        <p>Registered charity <a href="https://register-of-charities.charitycommission.gov.uk/charity-search/-/charity-details/{{ site.charity_number }}" rel="nofollow noreferrer noopener" target="_blank">{{ site.charity_number }}</a>.</p>
+      {%- endif -%}
+    {%- endif -%}
+  </div>
+</footer>
