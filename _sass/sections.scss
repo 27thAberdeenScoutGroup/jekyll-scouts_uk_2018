@@ -3,29 +3,28 @@ main.layout-section {
   flex-direction: row;
 
   #content {
-    #content-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-
-      h1 {
-        margin: 0;
-      }
-
-      img {
-        max-width: 20rem;
-        max-height: 10rem;
-      }
-    }
-
     #content-body {
       max-width: 45rem;
     }
 
     #content-footer {
       display: flex;
-      justify-content: space-between;
-      align-items: center;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      align-items: flex-start;
+
+      .youth-approved-seal {
+        max-width: 10rem;
+      }
+
+      @media screen and (max-width: 32rem) {
+        flex-direction: column;
+        align-items: center;
+
+        .youth-approved-seal {
+          max-width: 7.5rem;
+        }
+      }
     }
   }
 
@@ -39,29 +38,5 @@ main.layout-section {
 @media screen and (max-width: 60rem) {
   main.layout-section #tweets {
     display: none;
-  }
-}
-
-@media screen and (max-width: 40rem) {
-  main.layout-section {
-    #content {
-      #content-header {
-        img {
-          max-width: 15rem;
-        }
-      }
-    }
-  }
-}
-
-@media screen and (max-width: 30rem) {
-  main.layout-section {
-    #content {
-      #content-header {
-        img {
-          max-width: 10rem;
-        }
-      }
-    }
   }
 }

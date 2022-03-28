@@ -6,54 +6,8 @@ main_class: section
 <div id="content">
   <div id="content-header">
     <h1>
-      {%- assign logo = page.type | capitalize -%}
-      {%- case page.type | downcase -%}
-        {%- when "squirrels" -%}
-          {%- assign type =  page.logo_type | default: "primary" | capitalize -%}
-          {%- assign colour = page.logo_colour | default: "red" | capitalize -%}
-          {%- if type == "Symbol" -%}
-            {%- assign widths = "100" -%}
-          {%- endif -%}
-        {%- when "beavers" -%}
-          {%- assign colour = page.logo_colour | default: "blue" | capitalize -%}
-        {%- when "cubs" -%}
-          {%- assign colour = page.logo_colour | default: "green" | capitalize -%}
-          {%- assign widths = "100,320,480,640" -%}
-        {%- when "scouts" -%}
-          {%- assign colour = page.logo_colour | default: "green" | capitalize -%}
-        {%- when "explorers" -%}
-          {%- assign colour = page.logo_colour | default: "blue" | capitalize -%}
-        {%- when "network" -%}
-          {%- assign widths = "100,320,480" -%}
-        {%- when "activesupport" -%}
-          {%- if logo == "Activesupport" -%}
-            {%- assign logo = "ActiveSupport" -%}
-          {%- endif -%}
-        {%- else -%}
-          {%- assign colour = page.logo_colour | default: "black" | capitalize -%}
-      {%- endcase -%}
-      {%- assign path = "assets/images/logos/" | append: logo | append: type | append: colour | relative_url -%}
-      {%- assign widths = widths | default: "100,320,480,640,800" | split: "," -%}
-      {%- capture srcset -%}
-        {%- for i in widths -%}
-          {{ path }}-{{ i }}.png {{ i }}w,
-        {%- endfor -%}
-      {%- endcapture -%}
-      <img src="{{ path }}.png" srcset="{{ srcset }}" alt="{{ page.type }}" loading="eager">
+      {{ page.title | escape }}
     </h1>
-
-    {%- if page.youth_approved -%}
-      {%- assign today = 'now' | date: '%Y-%m-%d' -%}
-      {%- assign expires = page.youth_approved.expires | date: '%Y-%m-%d' -%}
-      {%- if expires >= today -%}
-        <a href="https://www.scouts.scot/members/youth-involvement/youth-approved-award/" rel="nofollow noopener" target="_blank" class="youth-approved">
-          {%- assign logo = page.youth_approved.level | capitalize -%}
-          {%- assign logo = "assets/images/YouthApproved" | append: logo | relative_url -%}
-          {%- assign alt = "We've got the " | append: page.youth_approved.level | append: " Youth Approved award from Scouts Scotland." -%}
-          <img src="{{ logo }}.png" srcset="{{ logo }}-100.png 100w, {{ logo }}-320.png 320w, {{ logo }}-480.png 480w, {{ logo }}-640.png 640w" alt="{{ alt }}">
-        </a>
-        {%- endif -%}
-    {%- endif -%}
   </div>
 
 
@@ -64,6 +18,19 @@ main_class: section
   <div id="content-footer">
     {%- assign social_links = page.social_links -%}
     {%- include social-links.html -%}
+
+    {%- if page.youth_approved -%}
+      {%- assign today = 'now' | date: '%Y-%m-%d' -%}
+      {%- assign expires = page.youth_approved.expires | date: '%Y-%m-%d' -%}
+      {%- if expires >= today -%}
+        <a href="https://www.scouts.scot/members/youth-involvement/youth-approved-award/" rel="nofollow noopener" target="_blank">
+          {%- assign logo = page.youth_approved.level | capitalize -%}
+          {%- assign logo = "assets/images/YouthApproved" | append: logo | relative_url -%}
+          {%- assign alt = "We've got the " | append: page.youth_approved.level | append: " Youth Approved award from Scouts Scotland." -%}
+          <img class="youth-approved-seal" src="{{ logo }}.png" srcset="{{ logo }}-100.png 100w, {{ logo }}-320.png 320w, {{ logo }}-480.png 480w, {{ logo }}-640.png 640w" alt="{{ alt }}">
+        </a>
+        {%- endif -%}
+    {%- endif -%}
   </div>
 </div>
 

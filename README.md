@@ -81,9 +81,7 @@ defaults:
 
 Then create your files in the _sections directory. A number of front matter settings are available:
 * title:
-* type: squirrels / beavers / cubs / scouts / explorers / network / activesupport - causes the correct logo to be shown
-* logo_type: (only for squirrels) primary / symbol
-* logo_colour: black / white / (others that vary by section e.g. blue / colourful for beavers, green for cubs / scouts)
+* type: squirrels / beavers / cubs / scouts / explorers / network / activesupport
 * youth_approved.level: foundation / bronze (causes the relevant seal to be displayed)
 * youth_approved.expires: date of certificate expiry in YYYY-MM-DD format.
 * social_links.email
