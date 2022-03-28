@@ -103,7 +103,11 @@ Then create your files in the _sections directory. A number of front matter sett
 If a section has a social_links.twitter value and the screen is wide enough then their last five tweets will be displayed at the side of the page.
 #### Basic search engine optimisation (provided by [jekyll-seo-tag](https://github.com/jekyll/jekyll-seo-tag))
 
-#### Selection of images
-* Look in assets/images/logos
+#### Selection of images/assets
+* Logos: assets/images/logos
+  * Sections and Active Support
+  * Linear / Stacked
+  * FleurDeLis
 * [Tabler icons](https://tablericons.com/): assets/images/tabler-icons-sprite.svg
 * Scouts Scotland's Youth Approved seals: assets/images
+* Nunito Sans font: assets/fonts/NunitoSans

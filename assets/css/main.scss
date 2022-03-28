@@ -23,8 +23,33 @@
   --text-color: var(--scout-black);
 }
 
+@font-face {
+  font-family: 'Nunito Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: url({{ "assets/fonts/NunitoSans/NunitoSans-Regular.ttf" | relative_url}});
+}
+@font-face {
+  font-family: 'Nunito Sans';
+  font-style: italic;
+  font-weight: 400;
+  src: url({{ "assets/fonts/NunitoSans/NunitoSans-Italic.ttf" | relative_url}});
+}
+@font-face {
+  font-family: 'Nunito Sans';
+  font-style: normal;
+  font-weight: 700;
+  src: url({{ "assets/fonts/NunitoSans/NunitoSans-Black.ttf" | relative_url}});
+}
+@font-face {
+  font-family: 'Nunito Sans';
+  font-style: italic;
+  font-weight: 700;
+  src: url({{ "assets/fonts/NunitoSans/NunitoSans-BlackItalic.ttf" | relative_url}});
+}
+
 html {
-  font-family: "Nunito Sans", Arial, sans-serif;
+  font-family: 'Nunito Sans', Arial, sans-serif;
   scroll-behavior: smooth;
 }
 
