@@ -18,19 +18,7 @@ main_class: section
   <div id="content-footer">
     {%- assign social_links = page.social_links -%}
     {%- include social-links.html -%}
-
-    {%- if page.youth_approved -%}
-      {%- assign today = 'now' | date: '%Y-%m-%d' -%}
-      {%- assign expires = page.youth_approved.expires | date: '%Y-%m-%d' -%}
-      {%- if expires >= today -%}
-        <a href="https://www.scouts.scot/members/youth-involvement/youth-approved-award/" rel="nofollow noopener" target="_blank">
-          {%- assign logo = page.youth_approved.level | capitalize -%}
-          {%- assign logo = "assets/images/YouthApproved" | append: logo | relative_url -%}
-          {%- assign alt = "We've got the " | append: page.youth_approved.level | append: " Youth Approved award from Scouts Scotland." -%}
-          <img class="youth-approved-seal" src="{{ logo }}.png" srcset="{{ logo }}-100.png 100w, {{ logo }}-320.png 320w, {{ logo }}-480.png 480w, {{ logo }}-640.png 640w" alt="{{ alt }}">
-        </a>
-        {%- endif -%}
-    {%- endif -%}
+    {%- if page.youth_approved -%}{% youth_approved %}{%- endif -%}
   </div>
 </div>
 

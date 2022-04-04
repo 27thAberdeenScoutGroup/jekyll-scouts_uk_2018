@@ -8,7 +8,7 @@ A [Jekyll](https://jekyllrb.com/) template for the UK Scouts brand (2018). You c
 Add this line to your Jekyll site's Gemfile:
 
 ```ruby
-gem 'jekyll-scouts_uk_2018', '~> 1.1'
+gem 'jekyll-scouts_uk_2018', '~> 1.3', group: 'jekyll_plugins'
 ```
 
 And add this line to your Jekyll site's _config.yml:
@@ -95,6 +95,34 @@ Then create your files in the _sections directory. A number of front matter sett
 
 
 ### Other things you get
+
+#### Included Tags
+
+The gem **MUST** be in the jekyll_plugins group to use the included tags.
+
+##### youth_approved
+
+```
+{% youth_approved %}
+```
+Will render an image of [Scout Scotland's Youth Approved](https://www.scouts.scot/members/youth-involvement/youth-approved-award/) seal, with the level chosen by:
+
+* The value of the youth_approved.level front matter
+* The generic Youth Approved logo
+
+If the frontmatter youth_approved.expires is present and in the past then nothing will be rendered.
+
+```
+{% youth_approved <level> %}
+```
+Will render an image of Scout Scotland's Youth Approved seal at the passed level.
+
+```
+{% youth_approved <level> <expires> %}
+```
+Will render an image of Scout Scotland's Youth Approved seal at the passed level if the passed expires (format YYYY-MM-DD) has not passed.
+
+In all cases the img has a class of youth-approved-seal and is enclosed by a link to the scheme on Scouts Scotland's website.
 
 #### Ability to display twitter content (provided by [jekyll-twitter-plugin](https://github.com/rob-murray/jekyll-twitter-plugin))
 
