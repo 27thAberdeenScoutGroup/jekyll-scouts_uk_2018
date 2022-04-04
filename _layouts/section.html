@@ -37,6 +37,6 @@ main_class: section
 {%- if page.social_links.twitter -%}
   <div id="tweets">
     {% assign twitter_url = 'https://twitter.com/' | append: page.social_links.twitter %}
-    {% twitternocache twitter_url limit=3 %}
+    {% twitter twitter_url limit=3 %}
   </div>
 {%- endif -%}
