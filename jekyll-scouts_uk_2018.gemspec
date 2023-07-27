@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |spec|
   spec.name          = 'jekyll-scouts_uk_2018'
-  spec.version       = '1.4.0'
+  spec.version       = '1.5.0'
   spec.authors       = ['Robert Gauld']
   spec.email         = ['robert@robertgauld.uk']
 
@@ -16,5 +16,4 @@ Gem::Specification.new do |spec|
 
   spec.add_runtime_dependency 'jekyll', '~> 4.2'
   spec.add_runtime_dependency 'jekyll-seo-tag', '~> 2.8'
-  spec.add_runtime_dependency 'jekyll-twitter-plugin', '~> 2.1'
 end

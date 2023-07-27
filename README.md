@@ -124,9 +124,6 @@ Will render an image of Scout Scotland's Youth Approved seal at the passed level
 
 In all cases the img has a class of youth-approved-seal and is enclosed by a link to the scheme on Scouts Scotland's website.
 
-#### Ability to display twitter content (provided by [jekyll-twitter-plugin](https://github.com/rob-murray/jekyll-twitter-plugin))
-
-If a section has a social_links.twitter value and the screen is wide enough then their last five tweets will be displayed at the side of the page.
 #### Basic search engine optimisation (provided by [jekyll-seo-tag](https://github.com/jekyll/jekyll-seo-tag))
 
 #### Selection of images/assets

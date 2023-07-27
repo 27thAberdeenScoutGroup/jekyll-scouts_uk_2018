@@ -20,10 +20,3 @@ layout: default
     {%- if page.youth_approved -%}{% youth_approved %}{%- endif -%}
   </div>
 </div>
-
-{%- if page.social_links.twitter -%}
-  <div id="tweets">
-    {% assign twitter_url = 'https://twitter.com/' | append: page.social_links.twitter %}
-    {% twitter twitter_url limit=3 %}
-  </div>
-{%- endif -%}
