@@ -56,6 +56,7 @@ Links to contact your group / your groups social media can be added by adding an
 social_links:
   email:
   twitter:
+  x:
   facebook:
   flickr:
   instagram:
@@ -86,6 +87,7 @@ Then create your files in the _sections directory. A number of front matter sett
 * youth_approved.expires: date of certificate expiry in YYYY-MM-DD format.
 * social_links.email
 * social_links.twitter
+* social_links.x
 * social_links.facebook
 * social_links.flickr
 * social_links.instagram

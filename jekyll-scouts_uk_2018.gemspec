@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |spec|
   spec.name          = 'jekyll-scouts_uk_2018'
-  spec.version       = '1.5.0'
+  spec.version       = '1.6.0'
   spec.authors       = ['Robert Gauld']
   spec.email         = ['robert@robertgauld.uk']
 
